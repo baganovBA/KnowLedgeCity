@@ -8,7 +8,7 @@ const PrivateRoute = ({ path, unauthRedirect = '/login', component }) => {
     useEffect(() => {
         const tmp_token = localStorage.getItem('token')
         checkToken(tmp_token)
-    }, [])
+    }, path)
 
     const checkToken = (tmp_token) => {
         fetch('http://localhost:5000/check_token', {

@@ -1,9 +1,6 @@
 .container{
     margin: 0 auto;
     width: 80%;
-    
-    /* flex-direction: row; */
-    /* border: solid 1px; */
 }
 
 .main{
@@ -64,9 +61,6 @@
 }
 
 .container_pages_item{
-    /* border: solid 0.5px gray;
-    width: 2em;
-    height: 2em; */
     margin-right: 10px;
 }
 

@@ -41,9 +41,7 @@ class Login extends React.Component {
             this.setState({error:true})
         })
     }
-    // , ()=> setTimeout(() => this.setState({isLoggined:false}, 1000))
-    // { return(localStorage.setItem('login', JSON.stringify(data.login)), localStorage.setItem('token', JSON.stringify(data.token)))}
-
+   
     render () {
         return (
             <div className="app">

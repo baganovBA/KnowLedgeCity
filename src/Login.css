@@ -4,16 +4,13 @@
   }
   
   .app {
-    /* height: 10vh; */
     text-align: center;
     width: 50%;
     min-width: 425px;
-    /* border:solid 1px gray; */
     margin: 0 auto;
     text-align: left;
     margin-top: 10%;
     margin-bottom: 250px;
-    /* padding: 15px; */
     box-sizing: border-box;
   
   }
@@ -32,36 +29,27 @@
   }
   
   .form{
-    
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* border: solid 1px; */
-    /* margin: 0 auto; */
   }
   
   .form_string{
-    /* margin: 0 auto; */
+    
     border:solid 1px gray;
     background-color: white;
-    
     height: 35px;
     border-radius: 25px;
     margin-bottom: 15px;
     display: flex;
     flex-direction: row;
-    /* box-sizing: border-box; */
+    
     padding-left: 10px;
-    /* position: relative; */
+    
   
   }
   
   .form_string_img{
-    /* width: 30px;
-    height: 30px; */
     box-sizing: inherit;
-    /* position: absolute; */
-    /* left:5px; */
   }
   
   .form_input{
@@ -75,7 +63,6 @@
 
   
   .form_input_checkbox{
-    /* margin: 0 auto; */
     margin-bottom: 35px;
   }
   
@@ -88,7 +75,6 @@
     padding-left: 30px;
     color:white;
     font-size: 18px;
-    /* font-weight: bold; */
     height: 35px;
     border:none;
     outline: none;

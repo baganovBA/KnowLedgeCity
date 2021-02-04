@@ -29,7 +29,6 @@ class UserList extends React.Component {
     }
 
     logOut =()=>{
-
         const token = localStorage.getItem('token')
         fetch('http://localhost:5000/logout', {
             method: "DELETE",
@@ -37,7 +36,7 @@ class UserList extends React.Component {
         }).then(res => res.json()).then(data => {
             localStorage.clear()
             document.location.reload()})
-        }
+        }  
 
     selectPage= (e) =>{
         this.setState({currentPage: parseInt(e.target.innerText) })
@@ -47,7 +46,6 @@ class UserList extends React.Component {
     nextPage = () => {
        
         if(this.state.currentPage < this.state.pages.length){
-           
             this.setState({currentPage: this.state.currentPage + 1})
         }
       }
