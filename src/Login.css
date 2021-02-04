@@ -43,6 +43,7 @@
   .form_string{
     /* margin: 0 auto; */
     border:solid 1px gray;
+    background-color: white;
     
     height: 35px;
     border-radius: 25px;
@@ -79,15 +80,21 @@
   }
   
   .form_button{
+    
     background-color: #E98C3B;
     text-align: left;
     border-radius: 15px;
     box-sizing: border-box;
-    padding-left: 10px;
+    padding-left: 30px;
     color:white;
-    font-size: 12px;
-    font-weight: bold;
-    height: 25px;
+    font-size: 18px;
+    /* font-weight: bold; */
+    height: 35px;
     border:none;
     outline: none;
+  }
+
+  .error{
+    color:red;
+    margin: 0 auto;
   }

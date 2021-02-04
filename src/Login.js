@@ -35,8 +35,11 @@ class Login extends React.Component {
                 localStorage.setItem('login', data.login)
                 localStorage.setItem('token', data.token)
                 this.setState({ isLoggined: true })
+                document.location.reload();
             })
-            .catch(error => {console.log('error', error)})
+            .catch(error => {console.log('error', error)
+            this.setState({error:true})
+        })
     }
     // , ()=> setTimeout(() => this.setState({isLoggined:false}, 1000))
     // { return(localStorage.setItem('login', JSON.stringify(data.login)), localStorage.setItem('token', JSON.stringify(data.token)))}
@@ -56,12 +59,13 @@ class Login extends React.Component {
                         <img className='form_string_img' src={password} alt='logo_password' />
                         <input onChange={this.onChangeHandaler} className='form_input' name='password' type='password' placeholder='Password' />
                     </div>
+                    {this.state.error && <p className='error'>Неверные данные</p>}
                     <div className='form_input_checkbox'><input type='checkbox' /><span>Remember me</span></div>
                     <button onClick={this.sendAuth} type='submit' className='form_button'>Log In</button>
                 </form>
 
                 {this.state.isLoggined && 
-                <Redirect to ='/' />
+                <Redirect to ='/userlist' />
                 }
 
             </div>)

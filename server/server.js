@@ -34,6 +34,13 @@ const usersList = [
     { id: 4, name: 'Sasha', group: 'main' },
     { id: 5, name: 'Ira', group: 'main' },
     { id: 6, name: 'Kostya', group: 'main' },
+    { id: 7, name: 'Kostya', group: 'main' },
+    { id: 8, name: 'Kostya', group: 'main' },
+    { id: 9, name: 'Kostya', group: 'main' },
+    { id: 10, name: 'Kostya', group: 'main' },
+    { id: 11, name: 'Kostya', group: 'main' },
+    { id: 12, name: 'Kostya', group: 'main' },
+    { id: 13, name: 'Kostya', group: 'main' },
 ]
 const privateKey = "KnowledgeCity"
 
@@ -92,6 +99,15 @@ app.get('/check_token', (req, res) => {
         return res.status(200).send({ success: true })
     }
     return res.status(401).send({ success: false, error: 'invalid login/password' })
+})
+
+app.delete('/logout',(req,res) =>{
+    const auth = checkToken(req)
+    if(auth){
+        tokens.filter((item)=> item.token !== req.headers['x-token'])
+        return res.status(200).send({message:"You Log Out"})
+    }
+    res.status(401).send({error:'Invalid autorised'})
 })
 
 const checkToken = (req) => {
